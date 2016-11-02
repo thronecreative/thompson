@@ -1,0 +1,346 @@
+
+
+
+//	================================================
+//	SECTION
+//	================================================
+
+.section
+	//+display(flex)
+	//+align-items(center)
+	//+justify-content(center)
+	//border-bottom: #333 solid 1px
+	//text-align: center
+	
+	min-height: 100vh
+
+	+bp(s)
+		padding: 40px 10px
+
+.section__heading
+	font-family: $font_header
+	font-size: 60px
+	font-weight: bold
+	
+	margin-bottom: 10px
+	line-height: 60px
+	margin-top: 0
+	text-transform: uppercase
+	letter-spacing: 5px
+
+	+bp(m)
+		font-size: 40px
+
+.section__title
+	background-color: #fff
+	text-align: center
+
+.section__inner
+	position: relative
+	//max-width: 900px
+	//margin: 0 auto
+
+.section__info
+	//background-color: #fff
+	//padding: 40px 80px
+
+//	================================================
+//	INTRO
+//	================================================
+
+#intro
+	background: url(../images/tandco-pattern-accent.gif) fixed
+	margin-left: $margin-left
+	
+	.section__bg
+		position: absolute
+		top: 50%
+		left: 0
+		margin-top: -25%
+		z-index: 1
+		width: 100%
+
+
+	.section__inner
+		max-width: 1200px
+		min-height: 100vh
+
+	.section__heading
+		font-size: 120px
+		line-height: 110px
+
+		span
+			color: $color_accent
+			font-size: 40px
+			position: relative
+			top: -70px
+			left: -5px
+			display: inline-block
+		
+	.section__sub-heading
+		font-weight: 300
+		font-style: italic
+		color: #999
+		font-size: 30px
+
+	.section__info
+		top: 50%
+		position: absolute
+		z-index: 10
+		margin-top: -8%
+
+	.section__cta
+		position: absolute
+		top: 50%
+		margin-top: 19%
+		margin-left: -35px
+		left: 50%
+		z-index: 10
+
+		a
+			width: 70px
+			height: 70px
+			display: block
+			background-color: $color_accent
+			color: #fff
+			line-height: 55px
+			text-align: center
+			border-radius: 40px
+			border: 10px solid #fff
+
+			&:hover
+				background-color: #999
+				//color: $color_accent
+
+
+
+//	================================================
+//	ABOUT
+//	================================================
+
+// .clip-svg
+// 	width: 0
+// 	height: 0
+
+// #lion
+// 	-webkit-clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0% 100%)
+// 	clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0% 100%)
+// 	-webkit-clip-path: url("#clip-svg-demo")
+// 	clip-path: url("#clip-svg-demo")
+
+#about
+	//background: url(../images/tandco-lion.jpg) fixed
+	+bg_cover("../images/tandco-lion.jpg")
+	background-color: #392136
+	color: #fff
+	margin-left: $margin-left
+	
+	#trademark
+		position: relative
+		float: left
+
+	#litigation
+		position: relative
+		float: right
+		margin-top: 40px
+
+	.section__info
+		//position: absolute
+		max-width: 900px
+
+		span
+			display: block
+			margin-left: 80px
+
+		ul
+			+clearfix
+			//margin: 0 80px
+			margin-left: 80px
+			padding: 0
+
+		li
+			font-style: italic
+			font-size: 18px
+			line-height: normal
+			margin: 0
+			padding: 0
+			float: left
+			width: 350px
+
+	
+	.section__inner
+		+clearfix
+		padding: 80px
+
+	.section__heading
+		font-style: italic
+		margin-bottom: 20px
+
+	.section__sub-heading
+		margin-left: 80px
+
+	.section__info
+
+	.section__cta
+
+//	================================================
+//	SERVICES
+//	================================================
+
+#services
+	
+	.section__inner
+		padding: 80px 0
+
+	.section__heading
+		text-align: center
+		font-style: italic
+
+	.section__sub-heading
+
+	.section__info
+		+clearfix
+
+		p
+			max-width: 600px
+			float: left
+			font-style: italic
+
+	.bio-image
+		float: left
+		margin: 0 20px 0 40px
+		max-width: 400px
+
+
+	.section__cta
+
+
+//	================================================
+//	CTA
+//	================================================
+
+#cta
+	background: url(../images/tandco-pattern-accent.gif) fixed
+	margin-left: $margin-left
+	min-height: 600px
+	overflow: hidden
+
+	.section__bg
+		position: absolute
+		top: 100px
+		right: 0
+		//margin-top: -25%
+		z-index: 1
+		//width: 100%
+		max-width: 700px
+		text-align: right
+
+	.section__inner
+		position: relative
+
+
+	.section__heading
+
+	.section__sub-heading
+
+	.section__info
+		position: relative
+		z-index: 100
+		text-align: right
+		padding-top: 200px
+	
+	.section__cta
+
+
+//	================================================
+//	FOOTER
+//	================================================
+	
+#footer
+	position: relative
+	height: 80px
+	//line-height: 85px
+	background-color: $color_accent
+	text-align: center
+	
+	.copy
+		text-align: center
+		text-transform: uppercase
+		font-size: 8px
+		color: #fff
+		letter-spacing: 4px
+		position: relative
+		z-index: 10
+		background-color: $color_accent
+		display: inline-block
+		padding: 2px 20px
+		border-radius: 30px
+		margin-top: 33px
+
+		+bp(s)
+			letter-spacing: 0
+
+
+
+
+
+
+
+
+#contact-holder
+	display: none
+	position: fixed
+	z-index: 1000
+
+#contact
+	+display(flex)
+	+align-items(center)
+	+justify-content(center)
+	position: fixed
+	padding: 0
+	top: 0
+	left: 0
+	right: 0
+	bottom: 0
+	z-index: 1000
+	background-color: rgba(#f2f1ed, .95)
+
+.contact__email
+	font-size: 30px
+	margin-bottom: 20px
+	margin-top: 20px
+
+	+bp(s)
+		font-size: 24px
+
+	a
+		display: inline-block
+		color: $color_primary
+		border-bottom: transparent solid 2px
+		padding-bottom: 5px
+
+		&:hover
+			border-bottom: $color_accent solid 2px
+
+.contact__phone
+	font-size: 20px
+
+.contact__close
+	display: inline-block
+	background-color: $color_accent
+	padding: 10px 20px
+	font-size: 10px
+	text-transform: uppercase
+	letter-spacing: 3px
+	color: #fff
+	border-radius: 100px
+	margin-top: 40px
+
+	&:hover
+		background-color: $color_primary
+		color: #fff
+
+
+
+
+
