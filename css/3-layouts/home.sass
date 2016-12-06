@@ -5,12 +5,23 @@
 //	SECTION
 //	================================================
 
+.sidebar
+	position: fixed
+	width: $margin-left
+	height: 100vh
+	background-color: #fff
+	top: 0
+	left: 0
+	z-index: 800
+
 .section
 	//+display(flex)
 	//+align-items(center)
 	//+justify-content(center)
 	//border-bottom: #333 solid 1px
 	//text-align: center
+	width: 100%
+	overflow: hidden
 	
 	min-height: 100vh
 
@@ -30,6 +41,7 @@
 
 	+bp(m)
 		font-size: 40px
+		line-height: 40px
 
 .section__title
 	background-color: #fff
@@ -50,8 +62,11 @@
 
 #intro
 	background: url(../images/tandco-pattern-accent.gif) fixed
-	margin-left: $margin-left
-	
+	position: relative
+	z-index: 1
+	padding-left: $margin-left
+
+
 	.section__bg
 		position: absolute
 		top: 50%
@@ -64,10 +79,19 @@
 	.section__inner
 		max-width: 1200px
 		min-height: 100vh
+		padding-left: 5px
+
+		+bp(m)
+			max-width: 900px
+		
 
 	.section__heading
 		font-size: 120px
 		line-height: 110px
+
+		+bp(m)
+			font-size: 80px
+			line-height: 80px
 
 		span
 			color: $color_accent
@@ -118,22 +142,16 @@
 //	ABOUT
 //	================================================
 
-// .clip-svg
-// 	width: 0
-// 	height: 0
-
-// #lion
-// 	-webkit-clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0% 100%)
-// 	clip-path: polygon(0% 0%, 100% 10%, 100% 100%, 0% 100%)
-// 	-webkit-clip-path: url("#clip-svg-demo")
-// 	clip-path: url("#clip-svg-demo")
-
 #about
 	//background: url(../images/tandco-lion.jpg) fixed
 	+bg_cover("../images/tandco-lion.jpg")
 	background-color: #392136
 	color: #fff
-	margin-left: $margin-left
+	//margin-left: $margin-left
+	position: relative
+	z-index: 200
+	width: 100%
+	overflow: hidden
 	
 	#trademark
 		position: relative
@@ -141,16 +159,21 @@
 
 	#litigation
 		position: relative
-		float: right
+		float: left
 		margin-top: 40px
+		margin-left: 80px
 
 	.section__info
 		//position: absolute
 		max-width: 900px
 
+
 		span
 			display: block
 			margin-left: 80px
+
+			+bp(m)
+				margin-left: 40px
 
 		ul
 			+clearfix
@@ -184,13 +207,21 @@
 	.section__cta
 
 //	================================================
-//	SERVICES
+//	TEAM
 //	================================================
 
-#services
-	
+#team
+	position: relative
+	overflow: visible
+	min-height: auto
+
+	.angle-top,
+	.angle-bottom
+		fill: #fff
+
 	.section__inner
-		padding: 80px 0
+		padding: 40px 0
+		+clearfix
 
 	.section__heading
 		text-align: center
@@ -198,18 +229,27 @@
 
 	.section__sub-heading
 
-	.section__info
-		+clearfix
+	.section__image
+		float: left
+		max-width: 400px
+		width: 40%
 
+
+	.section__info
+		max-width: 600px
+		width: 60%
+		float: left
+		
 		p
-			max-width: 600px
-			float: left
+			//max-width: 600px
+			//float: left
 			font-style: italic
+			//width: 100%
 
 	.bio-image
 		float: left
-		margin: 0 20px 0 40px
-		max-width: 400px
+		padding: 0 20px 0 40px
+		
 
 
 	.section__cta
@@ -221,9 +261,10 @@
 
 #cta
 	background: url(../images/tandco-pattern-accent.gif) fixed
-	margin-left: $margin-left
+	//margin-left: $margin-left
 	min-height: 600px
 	overflow: hidden
+	position: relative
 
 	.section__bg
 		position: absolute
@@ -231,9 +272,10 @@
 		right: 0
 		//margin-top: -25%
 		z-index: 1
-		//width: 100%
+		width: 100%
 		max-width: 700px
 		text-align: right
+		left: auto !important
 
 	.section__inner
 		position: relative
@@ -248,6 +290,8 @@
 		z-index: 100
 		text-align: right
 		padding-top: 200px
+		padding-right: $margin-left
+		left: 0 !important
 	
 	.section__cta
 
@@ -255,14 +299,32 @@
 //	================================================
 //	FOOTER
 //	================================================
-	
+.angle-top
+	position: absolute
+	top: -4.9vw
+	left: 0
+	z-index: 700
+
+.angle-bottom
+	position: absolute
+	bottom: -4.9vw
+	left: 0
+	z-index: 700
+
+
 #footer
 	position: relative
-	height: 80px
+	//height: 80px
 	//line-height: 85px
+	padding: 0 10px 30px
 	background-color: $color_accent
 	text-align: center
+	// overflow-x: hidden
 	
+	.angle-top
+		fill: $color_accent
+		//height: 5vw
+
 	.copy
 		text-align: center
 		text-transform: uppercase
@@ -275,16 +337,10 @@
 		display: inline-block
 		padding: 2px 20px
 		border-radius: 30px
-		margin-top: 33px
+		//margin-top: 33px
 
 		+bp(s)
 			letter-spacing: 0
-
-
-
-
-
-
 
 
 #contact-holder
@@ -314,13 +370,13 @@
 		font-size: 24px
 
 	a
-		display: inline-block
-		color: $color_primary
-		border-bottom: transparent solid 2px
-		padding-bottom: 5px
+		// display: inline-block
+		// color: $color_primary
+		// border-bottom: transparent solid 2px
+		// padding-bottom: 5px
 
-		&:hover
-			border-bottom: $color_accent solid 2px
+		// &:hover
+		// 	border-bottom: $color_accent solid 2px
 
 .contact__phone
 	font-size: 20px

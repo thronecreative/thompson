@@ -3173,14 +3173,14 @@ a {
   left: 0;
   width: 100%;
   background-color: #fff;
-  z-index: 100; }
+  z-index: 900; }
   @media (max-width: 600px) {
     #header {
       padding-bottom: 40px; } }
   #header .logo {
     float: left;
     margin-right: 20px;
-    padding: 10px 30px;
+    padding: 10px 35px;
     width: 340px; }
   #header .nav {
     text-align: right;
@@ -3203,7 +3203,18 @@ a {
     font-weight: 900;
     color: #222; }
 
+.sidebar {
+  position: fixed;
+  width: 35px;
+  height: 100vh;
+  background-color: #fff;
+  top: 0;
+  left: 0;
+  z-index: 800; }
+
 .section {
+  width: 100%;
+  overflow: hidden;
   min-height: 100vh; }
   @media (max-width: 600px) {
     .section {
@@ -3218,9 +3229,10 @@ a {
   margin-top: 0;
   text-transform: uppercase;
   letter-spacing: 5px; }
-  @media (max-width: 800px) {
+  @media (max-width: 1200px) {
     .section__heading {
-      font-size: 40px; } }
+      font-size: 40px;
+      line-height: 40px; } }
 
 .section__title {
   background-color: #fff;
@@ -3231,7 +3243,9 @@ a {
 
 #intro {
   background: url(../images/tandco-pattern-accent.gif) fixed;
-  margin-left: 30px; }
+  position: relative;
+  z-index: 1;
+  padding-left: 35px; }
   #intro .section__bg {
     position: absolute;
     top: 50%;
@@ -3241,10 +3255,18 @@ a {
     width: 100%; }
   #intro .section__inner {
     max-width: 1200px;
-    min-height: 100vh; }
+    min-height: 100vh;
+    padding-left: 5px; }
+    @media (max-width: 1200px) {
+      #intro .section__inner {
+        max-width: 900px; } }
   #intro .section__heading {
     font-size: 120px;
     line-height: 110px; }
+    @media (max-width: 1200px) {
+      #intro .section__heading {
+        font-size: 80px;
+        line-height: 80px; } }
     #intro .section__heading span {
       color: #b05da4;
       font-size: 40px;
@@ -3291,19 +3313,26 @@ a {
   min-height: 100vh;
   background-color: #392136;
   color: #fff;
-  margin-left: 30px; }
+  position: relative;
+  z-index: 200;
+  width: 100%;
+  overflow: hidden; }
   #about #trademark {
     position: relative;
     float: left; }
   #about #litigation {
     position: relative;
-    float: right;
-    margin-top: 40px; }
+    float: left;
+    margin-top: 40px;
+    margin-left: 80px; }
   #about .section__info {
     max-width: 900px; }
     #about .section__info span {
       display: block;
       margin-left: 80px; }
+      @media (max-width: 1200px) {
+        #about .section__info span {
+          margin-left: 40px; } }
     #about .section__info ul {
       margin-left: 80px;
       padding: 0; }
@@ -3331,49 +3360,79 @@ a {
   #about .section__sub-heading {
     margin-left: 80px; }
 
-#services .section__inner {
-  padding: 80px 0; }
-#services .section__heading {
-  text-align: center;
-  font-style: italic; }
-#services .section__info::after {
-  clear: both;
-  content: "";
-  display: table; }
-#services .section__info p {
-  max-width: 600px;
-  float: left;
-  font-style: italic; }
-#services .bio-image {
-  float: left;
-  margin: 0 20px 0 40px;
-  max-width: 400px; }
+#team {
+  position: relative;
+  overflow: visible;
+  min-height: auto; }
+  #team .angle-top,
+  #team .angle-bottom {
+    fill: #fff; }
+  #team .section__inner {
+    padding: 40px 0; }
+    #team .section__inner::after {
+      clear: both;
+      content: "";
+      display: table; }
+  #team .section__heading {
+    text-align: center;
+    font-style: italic; }
+  #team .section__image {
+    float: left;
+    max-width: 400px;
+    width: 40%; }
+  #team .section__info {
+    max-width: 600px;
+    width: 60%;
+    float: left; }
+    #team .section__info p {
+      font-style: italic; }
+  #team .bio-image {
+    float: left;
+    padding: 0 20px 0 40px; }
 
 #cta {
   background: url(../images/tandco-pattern-accent.gif) fixed;
-  margin-left: 30px;
   min-height: 600px;
-  overflow: hidden; }
+  overflow: hidden;
+  position: relative; }
   #cta .section__bg {
     position: absolute;
     top: 100px;
     right: 0;
     z-index: 1;
+    width: 100%;
     max-width: 700px;
-    text-align: right; }
+    text-align: right;
+    left: auto !important; }
   #cta .section__inner {
     position: relative; }
   #cta .section__info {
     position: relative;
     z-index: 100;
     text-align: right;
-    padding-top: 200px; }
+    padding-top: 200px;
+    padding-right: 35px;
+    left: 0 !important; }
+
+.angle-top {
+  position: absolute;
+  top: -4.9vw;
+  left: 0;
+  z-index: 700; }
+
+.angle-bottom {
+  position: absolute;
+  bottom: -4.9vw;
+  left: 0;
+  z-index: 700; }
 
 #footer {
   position: relative;
-  height: 80px;
+  padding: 0 10px 30px;
   background-color: #b05da4;
   text-align: center; }
+  #footer .angle-top {
+    fill: #b05da4; }
   #footer .copy {
     text-align: center;
     text-transform: uppercase;
@@ -3385,8 +3444,7 @@ a {
     background-color: #b05da4;
     display: inline-block;
     padding: 2px 20px;
-    border-radius: 30px;
-    margin-top: 33px; }
+    border-radius: 30px; }
     @media (max-width: 600px) {
       #footer .copy {
         letter-spacing: 0; } }
@@ -3438,13 +3496,6 @@ a {
   @media (max-width: 600px) {
     .contact__email {
       font-size: 24px; } }
-  .contact__email a {
-    display: inline-block;
-    color: #222;
-    border-bottom: transparent solid 2px;
-    padding-bottom: 5px; }
-    .contact__email a:hover {
-      border-bottom: #b05da4 solid 2px; }
 
 .contact__phone {
   font-size: 20px; }
@@ -3462,5 +3513,51 @@ a {
   .contact__close:hover {
     background-color: #222;
     color: #fff; }
+
+#cases {
+  padding-left: 35px;
+  background: url(../images/tandco-pattern-accent.gif) fixed;
+  padding-top: 70px; }
+  #cases::after {
+    clear: both;
+    content: "";
+    display: table; }
+  #cases .section__heading {
+    background-color: #fff;
+    padding-bottom: 20px;
+    padding-top: 20px;
+    margin-bottom: 0;
+    float: left;
+    clear: both; }
+
+.case {
+  background-color: #fff;
+  float: left;
+  clear: both;
+  padding: 20px 0;
+  padding-right: 20px;
+  border-top: #ccc dashed 1px;
+  font-size: 18px; }
+
+.case__client {
+  font-weight: bold; }
+
+.case__details {
+  font-style: italic;
+  font-size: 14px; }
+
+.back-btn {
+  background-color: #b05da4;
+  padding: 60px;
+  color: #fff;
+  font-size: 30px;
+  text-align: center; }
+  .back-btn a {
+    color: #fff;
+    padding: 20px 40px;
+    background-color: #b05da4;
+    display: inline-block; }
+    .back-btn a:hover {
+      color: #703768; }
 
 /*# sourceMappingURL=app.css.map */

@@ -44,8 +44,14 @@ $( document ).ready(function() {
 		}
 
 
+		$.stellar({
+			hideDistantElements: false,
+			responsive: true,
+			horizontalOffset: false
+		})
+
 		$.scrollIt({
-			topOffset: -70
+			topOffset: -50
 		});
 
 		// TOP NAV
