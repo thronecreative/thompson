@@ -3386,6 +3386,9 @@ a {
     float: left; }
     #team .section__info p {
       font-style: italic; }
+    #team .section__info .accent {
+      font-weight: bold;
+      text-transform: uppercase; }
   #team .bio-image {
     float: left;
     padding: 0 20px 0 40px; }

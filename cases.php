@@ -51,7 +51,7 @@
 		
 		<div class="section__info"  data-stellar-ratio=".8">
 			<h2 class="section__heading">Contact us:</h2>
-			<div class="address">4 Embarcadero Center, 39th Floor, San Francisco, CA 94111</div>
+		
 			<div class="contact__email"><a href="mailto:don@thompsonandco.com">don@thompsonandco.com</a></div>
 			<div class="contact__phone">(415) 506-8105</div>
 		</div>
@@ -67,7 +67,7 @@
 <div id="footer">
 	<?php include('partials/angle-top.php'); ?>
 	<div class="copy">
-		&copy; 2016 Thompson &amp; co. &mdash; Don't Steal. It's not nice.
+		&copy; 2016 Thompson &amp; co.
 	</div>
 </div>
 

@@ -38,8 +38,7 @@
 	<div class="section__inner"  data-stellar-ratio="1.2">
 		
 		<div id="trademark" class="section__info" >
-			<h1 class="section__heading">We protect <span>your brand.</span></h1>
-			<h2 class="section__sub-heading">Trademark Services:</h2>
+			<h1 class="section__heading">Trademark Services</h1>
 			<ul>
 				<li>Strategic Advice</li>
 				<li>Trademark Clearance (Searches/Opinions)</li>
@@ -55,8 +54,7 @@
 		</div>
 
 		<div id="litigation" class="section__info" >
-			<h1 class="section__heading">We fight for <span>your brand.</span></h1>
-			<h2 class="section__sub-heading">Litigation Services:</h2>
+			<h1 class="section__heading">Litigation Services</h1>
 			<ul>
 				<li>Trademark</li>
 				<li>Trade Dress</li>
@@ -77,14 +75,13 @@
 	<?php include('partials/angle-top.php'); ?>
 	<?php include('partials/angle-bottom.php'); ?>
 	<div class="section__inner">
-		<h2 class="section__heading">Donald A. Thompson</h2>
 		<div class="section__image">
 			<img src="images/tandco-don.jpg" alt="" class="bio-image">
 		</div>
 		<div class="section__info">
-			<p>Donald A. Thompson is an attorney in San Francisco. Prior to founding Thompson &amp; Co., he was elected partner at Harvey Siskind LLP, the top trademark boutique in Northern California according to the World Trademark Review. He previously founded an online startup and practiced at an international law firm. He holds a B.A. with high honors from Yale University and a J.D. from the University of Southern California, where he was Senior Submissions Editor of the Southern California Law Review. He is a member of Phi Beta Kappa and the Order of the Coif.</p>
+			<p><span class="accent">Donald A. Thompson</span> is an attorney in San Francisco. Prior to founding Thompson &amp; Co., he was elected partner at Harvey Siskind LLP, the top trademark boutique in Northern California according to the World Trademark Review. He previously founded an online startup and practiced at an international law firm. He holds a B.A. with high honors from Yale University and a J.D. from the University of Southern California, where he was Senior Submissions Editor of the Southern California Law Review. He is a member of Phi Beta Kappa and the Order of the Coif.</p>
 			<p>Don prides himself on clear writing, strategic thinking, and outstanding results. He has represented many famous and well-known brands, such as Gallo&reg;, Jack Daniel’s&reg;, Intel&reg;, Pinterest&reg;, and Rockstar&reg;. In addition to clearance, registration, and transactional matters, he has handled all stages of litigation, including pleadings, motions, discovery, trial, and appeal. He is admitted to practice before numerous state and federal courts, as well as the United States Patent and Trademark Office and the World Intellectual Property Organization.</p>
-			<p>Don is a member of the San Francisco Intellectual Property Law Association and the International Trademark Association, where he previously served on the Enforcement Committee and currently serves on the Young Practitioners Committee. He once enjoyed a sleepover at The White House. If you want to hear that story, you will have to return his phone calls.</p>
+			
 			<p>For a list of Don's recent engagements, <a href="./cases.php" >click here.</a></p>
 		</div>
 	</div>
@@ -95,7 +92,7 @@
 		
 		<div class="section__info"  data-stellar-ratio=".8">
 			<h2 class="section__heading">Contact us:</h2>
-			<div class="address">4 Embarcadero Center, 39th Floor, San Francisco, CA 94111</div>
+			
 			<div class="contact__email"><a href="mailto:don@thompsonandco.com">don@thompsonandco.com</a></div>
 			<div class="contact__phone">(415) 506-8105</div>
 		</div>
@@ -111,7 +108,7 @@
 <div id="footer">
 	<?php include('partials/angle-top.php'); ?>
 	<div class="copy">
-		&copy; 2016 Thompson &amp; co. &mdash; Don't Steal. It's not nice.
+		&copy; 2016 Thompson &amp; co.
 	</div>
 </div>
 
